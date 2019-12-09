@@ -37,9 +37,9 @@ global:
           scrape_interval: 5s
           dns_sd_configs:
             - names:
-                - 'tasks.cadvisor'
-                  type: 'A'
-                  port: 8080
+              - 'tasks.cadvisor'
+                type: 'A'
+                port: 8080
     #     static_configs:
     #          - targets: ['cadvisor:8080']
         
@@ -49,7 +49,7 @@ global:
         dns_sd_configs:
         - names:
             - 'tasks.node-exporter'
-            type: 'A'
-            port: 9100
+              type: 'A'
+              port: 9100
     #     static_configs:
     #          - targets: ['node-exporter:9100']
