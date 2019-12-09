@@ -9,8 +9,8 @@ global:
     external_labels:
         monitor: 'my-project'
   
-  # Load and evaluate rules in this file every 'evaluation_interval' seconds.
-  rule_files:
+    # Load and evaluate rules in this file every 'evaluation_interval' seconds.
+    rule_files:
     - 'alert.rules'
     # - "first.rules"
     # - "second.rules"
