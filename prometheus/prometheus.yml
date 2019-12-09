@@ -20,7 +20,7 @@ alerting:
     alertmanagers:
     - scheme: http
       static_configs:
-    - targets:
+      - targets:
         - "alertmanager:9093"
   
 # A scrape configuration containing exactly one endpoint to scrape:
