@@ -31,17 +31,17 @@ global:
           scrape_interval: 5s
           static_configs:
             - targets: ['localhost:9090']
-    
-        # Scrape the cadvisor every 5 seconds.
+        
+        # Scrape cadvisor itself every 5 seconds.
         - job_name: 'cadvisor'
-          scrape_interval: 5s
-          dns_sd_configs:
-          - names:
-            - 'tasks.cadvisor'
-              type: 'A'
-              port: 8080
+        scrape_interval: 5s
+        dns_sd_configs:
+        - names:
+          - 'tasks.cadvisor'
+          type: 'A'
+          port: 8080
     #     static_configs:
-    #          - targets: ['cadvisor:8080']
+    #          - targets: ['cadvisor:8080']        
         
         # Scrape the Node Exporter every 5 seconds.
         - job_name: 'node-exporter'
@@ -49,7 +49,7 @@ global:
           dns_sd_configs:
           - names:
             - 'tasks.node-exporter'
-              type: 'A'
-              port: 9100
+            type: 'A'
+            port: 9100
     #     static_configs:
     #          - targets: ['node-exporter:9100']
